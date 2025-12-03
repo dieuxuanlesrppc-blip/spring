@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Hoa Lá Xanh</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .leaf-pattern {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-delayed {
+            animation: float 7s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-blue-600 min-h-screen relative overflow-hidden text-white font-sans">
+
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 leaf-pattern pointer-events-none opacity-30"></div>
+
+    <!-- Decorative SVGs -->
+    
+    <!-- Top Left Flower -->
+    <div class="absolute top-0 left-0 w-64 h-64 -ml-10 -mt-10 opacity-80 floating">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current text-blue-200">
+            <path d="M42.7,-62.9C50.9,-52.8,50.1,-34.4,51.7,-19.2C53.4,-4,57.4,8,54.5,19.1C51.6,30.1,41.8,40.1,30.8,46.5C19.8,52.9,7.5,55.6,-3.5,60.5C-14.5,65.3,-24.2,72.3,-33.5,69.6C-42.8,66.9,-51.7,54.5,-56.5,41.9C-61.3,29.3,-62,16.4,-60.6,4.2C-59.2,-7.9,-55.7,-19.4,-48.4,-28.2C-41.1,-37,-30,-43.2,-19.2,-51.6C-8.3,-60,2.3,-70.6,14.4,-72.1C26.5,-73.6,40,-66,42,-58" transform="translate(100 100)" />
+        </svg>
+        <!-- Flower Petals SVG representation using paths -->
+        <svg class="absolute top-10 left-10 w-32 h-32 text-pink-200 opacity-70" viewBox="0 0 100 100">
+             <circle cx="50" cy="50" r="20" fill="yellow" />
+             <circle cx="50" cy="20" r="15" fill="white" />
+             <circle cx="50" cy="80" r="15" fill="white" />
+             <circle cx="20" cy="50" r="15" fill="white" />
+             <circle cx="80" cy="50" r="15" fill="white" />
+             <circle cx="28" cy="28" r="15" fill="white" />
+             <circle cx="72" cy="72" r="15" fill="white" />
+             <circle cx="28" cy="72" r="15" fill="white" />
+             <circle cx="72" cy="28" r="15" fill="white" />
+        </svg>
+    </div>
+
+    <!-- Bottom Right Leaf -->
+    <div class="absolute bottom-0 right-0 w-96 h-96 -mr-20 -mb-20 opacity-60 floating-delayed text-green-300">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full transform rotate-45">
+            <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
+        </svg>
+    </div>
+
+    <!-- Top Right Vines -->
+    <div class="absolute top-0 right-0 w-64 h-64 opacity-50">
+        <svg viewBox="0 0 100 100" class="w-full h-full text-green-200 fill-current">
+             <path d="M100,0 Q50,50 100,100 T100,200" stroke="currentColor" stroke-width="2" fill="none"/>
+             <circle cx="90" cy="20" r="5" />
+             <circle cx="80" cy="40" r="3" />
+             <circle cx="95" cy="60" r="4" />
+        </svg>
+    </div>
+
+    <!-- Main Content -->
+    <main class="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
+        <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-white/20 max-w-2xl">
+            <h1 class="text-5xl font-bold mb-4 drop-shadow-lg text-white">Chào mừng bạn</h1>
+            <p class="text-xl mb-8 text-blue-50">Một không gian yên bình được lấy cảm hứng từ thiên nhiên.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-white/20 p-6 rounded-xl hover:bg-white/30 transition duration-300 cursor-pointer">
+                    <div class="text-4xl mb-2">🌿</div>
+                    <h3 class="font-semibold text-lg">Tự Nhiên</h3>
+                    <p class="text-sm text-blue-100 mt-2">Hòa mình vào vẻ đẹp của cây cỏ.</p>
+                </div>
+                <div class="bg-white/20 p-6 rounded-xl hover:bg-white/30 transition duration-300 cursor-pointer">
+                    <div class="text-4xl mb-2">🌸</div>
+                    <h3 class="font-semibold text-lg">Tươi Mới</h3>
+                    <p class="text-sm text-blue-100 mt-2">Sức sống mới từ những đóa hoa.</p>
+                </div>
+                <div class="bg-white/20 p-6 rounded-xl hover:bg-white/30 transition duration-300 cursor-pointer">
+                    <div class="text-4xl mb-2">💧</div>
+                    <h3 class="font-semibold text-lg">Thanh Khiết</h3>
+                    <p class="text-sm text-blue-100 mt-2">Dòng nước mát lành trong xanh.</p>
+                </div>
+            </div>
+
+            <button class="mt-10 px-8 py-3 bg-white text-blue-600 rounded-full font-bold hover:bg-blue-50 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Khám Phá Ngay
+            </button>
+        </div>
+    </main>
+    
+    <footer class="absolute bottom-4 w-full text-center text-blue-200 text-sm z-10">
+        &copy; 2023 Thiết kế Website Hoa Lá. All rights reserved.
+    </footer>
+
+</body>
+</html>
